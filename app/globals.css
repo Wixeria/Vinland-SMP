@@ -4,518 +4,494 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Enhanced dark theme with more vibrant Minecraft-style colors */
-  --background: oklch(0.08 0.04 240); /* Deeper dark background with blue tint */
-  --foreground: oklch(0.98 0.02 200); /* Bright white-blue text */
-  --card: oklch(0.12 0.05 220); /* Darker cards with more blue saturation */
-  --card-foreground: oklch(0.95 0.03 200); /* Brighter card text */
-  --popover: oklch(0.12 0.05 220);
-  --popover-foreground: oklch(0.98 0.02 200);
-  --primary: oklch(0.65 0.25 220); /* More vibrant blue primary */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.45 0.2 280); /* More vibrant purple secondary */
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.18 0.04 220);
-  --muted-foreground: oklch(0.75 0.08 200);
-  --accent: oklch(0.55 0.25 180); /* Brighter cyan accent */
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.22 0.06 220); /* More visible borders */
-  --input: oklch(0.15 0.05 220);
-  --ring: oklch(0.65 0.25 220);
-  --chart-1: oklch(0.5 0.2 270);
-  --chart-2: oklch(0.6 0.2 220);
-  --chart-3: oklch(0.6 0.2 140);
-  --chart-4: oklch(0.8 0.15 85);
-  --chart-5: oklch(0.6 0.25 25);
-  --radius: 0.75rem; /* Slightly more rounded for modern look */
-  --sidebar: oklch(0.12 0.05 220);
-  --sidebar-foreground: oklch(0.98 0.02 200);
-  --sidebar-primary: oklch(0.65 0.25 220);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.55 0.25 180);
-  --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.22 0.06 220);
-  --sidebar-ring: oklch(0.65 0.25 220);
+    --background: oklch(0.08 0.04 240);
+    --foreground: oklch(0.98 0.02 200);
+    --card: oklch(0.12 0.05 220);
+    --card-foreground: oklch(0.95 0.03 200);
+    --popover: oklch(0.12 0.05 220);
+    --popover-foreground: oklch(0.98 0.02 200);
+    --primary: oklch(0.65 0.25 220);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.45 0.2 280);
+    --secondary-foreground: oklch(1 0 0);
+    --muted: oklch(0.18 0.04 220);
+    --muted-foreground: oklch(0.75 0.08 200);
+    --accent: oklch(0.55 0.25 180);
+    --accent-foreground: oklch(1 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(1 0 0);
+    --border: oklch(0.22 0.06 220);
+    --input: oklch(0.15 0.05 220);
+    --ring: oklch(0.65 0.25 220);
+    --chart-1: oklch(0.5 0.2 270);
+    --chart-2: oklch(0.6 0.2 220);
+    --chart-3: oklch(0.6 0.2 140);
+    --chart-4: oklch(0.8 0.15 85);
+    --chart-5: oklch(0.6 0.25 25);
+    --radius: 0.75rem;
+    --sidebar: oklch(0.12 0.05 220);
+    --sidebar-foreground: oklch(0.98 0.02 200);
+    --sidebar-primary: oklch(0.65 0.25 220);
+    --sidebar-primary-foreground: oklch(1 0 0);
+    --sidebar-accent: oklch(0.55 0.25 180);
+    --sidebar-accent-foreground: oklch(1 0 0);
+    --sidebar-border: oklch(0.22 0.06 220);
+    --sidebar-ring: oklch(0.65 0.25 220);
 }
 
 .dark {
-  /* Matching dark theme values */
-  --background: oklch(0.08 0.04 240);
-  --foreground: oklch(0.98 0.02 200);
-  --card: oklch(0.12 0.05 220);
-  --card-foreground: oklch(0.95 0.03 200);
-  --popover: oklch(0.12 0.05 220);
-  --popover-foreground: oklch(0.98 0.02 200);
-  --primary: oklch(0.65 0.25 220);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.45 0.2 280);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.18 0.04 220);
-  --muted-foreground: oklch(0.75 0.08 200);
-  --accent: oklch(0.55 0.25 180);
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.22 0.06 220);
-  --input: oklch(0.15 0.05 220);
-  --ring: oklch(0.65 0.25 220);
-  --chart-1: oklch(0.6 0.2 270);
-  --chart-2: oklch(0.7 0.2 220);
-  --chart-3: oklch(0.7 0.2 140);
-  --chart-4: oklch(0.8 0.15 85);
-  --chart-5: oklch(0.6 0.25 25);
-  --sidebar: oklch(0.12 0.05 220);
-  --sidebar-foreground: oklch(0.98 0.02 200);
-  --sidebar-primary: oklch(0.65 0.25 220);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.55 0.25 180);
-  --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.22 0.06 220);
-  --sidebar-ring: oklch(0.65 0.25 220);
+
+    --background: oklch(0.08 0.04 240);
+    --foreground: oklch(0.98 0.02 200);
+    --card: oklch(0.12 0.05 220);
+    --card-foreground: oklch(0.95 0.03 200);
+    --popover: oklch(0.12 0.05 220);
+    --popover-foreground: oklch(0.98 0.02 200);
+    --primary: oklch(0.65 0.25 220);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.45 0.2 280);
+    --secondary-foreground: oklch(1 0 0);
+    --muted: oklch(0.18 0.04 220);
+    --muted-foreground: oklch(0.75 0.08 200);
+    --accent: oklch(0.55 0.25 180);
+    --accent-foreground: oklch(1 0 0);
+    --destructive: oklch(0.396 0.141 25.723);
+    --destructive-foreground: oklch(0.637 0.237 25.331);
+    --border: oklch(0.22 0.06 220);
+    --input: oklch(0.15 0.05 220);
+    --ring: oklch(0.65 0.25 220);
+    --chart-1: oklch(0.6 0.2 270);
+    --chart-2: oklch(0.7 0.2 220);
+    --chart-3: oklch(0.7 0.2 140);
+    --chart-4: oklch(0.8 0.15 85);
+    --chart-5: oklch(0.6 0.25 25);
+    --sidebar: oklch(0.12 0.05 220);
+    --sidebar-foreground: oklch(0.98 0.02 200);
+    --sidebar-primary: oklch(0.65 0.25 220);
+    --sidebar-primary-foreground: oklch(1 0 0);
+    --sidebar-accent: oklch(0.55 0.25 180);
+    --sidebar-accent-foreground: oklch(1 0 0);
+    --sidebar-border: oklch(0.22 0.06 220);
+    --sidebar-ring: oklch(0.65 0.25 220);
 }
 
 @theme inline {
-  --font-inter: "Inter", sans-serif;
-  --font-sans: var(--font-inter);
-  --font-mono: var(--font-inter);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+    --font-inter: "Inter", sans-serif;
+    --font-sans: var(--font-inter);
+    --font-mono: var(--font-inter);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-    /* Updated to use scroll-based background movement instead of automatic animation */
-    background: url("/images/minecraft-bg.png"),
-      linear-gradient(
-        135deg,
-        oklch(0.05 0.06 260) 0%,
-        oklch(0.08 0.05 240) 15%,
-        oklch(0.06 0.08 200) 30%,
-        oklch(0.09 0.04 180) 45%,
-        oklch(0.07 0.06 160) 60%,
-        oklch(0.08 0.05 200) 75%,
-        oklch(0.06 0.07 240) 90%,
-        oklch(0.05 0.06 260) 100%
-      );
-    background-size: 120% 120%, 400% 400%;
-    background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px)
-      calc(var(--scroll-y, 0) * -0.1px);
-    background-attachment: fixed, scroll;
-    background-repeat: no-repeat, no-repeat;
-    min-height: 100vh;
-    position: relative;
-    /* Fixed black gap at bottom by ensuring full height coverage */
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
+    * {
+        @apply border-border outline-ring/50;
+    }
 
-  /* Enhanced overlay to be more subtle and blend better */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      135deg,
-      oklch(0.05 0.06 260 / 0.3) 0%,
-      oklch(0.08 0.05 240 / 0.2) 25%,
-      oklch(0.06 0.08 200 / 0.15) 50%,
-      oklch(0.09 0.04 180 / 0.2) 75%,
-      oklch(0.05 0.06 260 / 0.3) 100%
-    );
-    pointer-events: none;
-    z-index: -1;
-  }
+    body {
+        @apply bg-background text-foreground;
 
-  /* Fixed black gap by ensuring html and body cover full height */
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+        background: url("/images/minecraft-bg.png"),
+        linear-gradient(
+                135deg,
+                oklch(0.05 0.06 260) 0%,
+                oklch(0.08 0.05 240) 15%,
+                oklch(0.06 0.08 200) 30%,
+                oklch(0.09 0.04 180) 45%,
+                oklch(0.07 0.06 160) 60%,
+                oklch(0.08 0.05 200) 75%,
+                oklch(0.06 0.07 240) 90%,
+                oklch(0.05 0.06 260) 100%
+        );
+        background-size: 120% 120%, 400% 400%;
+        background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px) calc(var(--scroll-y, 0) * -0.1px);
+        background-attachment: fixed, scroll;
+        background-repeat: no-repeat, no-repeat;
+        min-height: 100vh;
+        position: relative;
+
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+                135deg,
+                oklch(0.05 0.06 260 / 0.3) 0%,
+                oklch(0.08 0.05 240 / 0.2) 25%,
+                oklch(0.06 0.08 200 / 0.15) 50%,
+                oklch(0.09 0.04 180 / 0.2) 75%,
+                oklch(0.05 0.06 260 / 0.3) 100%
+        );
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
 }
 
-/* Enhanced gradient animation with more dynamic movement */
 @keyframes minecraftGradient {
-  0% {
-    background-position: 0% 50%, 0% 0%;
-  }
-  25% {
-    background-position: 100% 25%, 50% 50%;
-  }
-  50% {
-    background-position: 50% 100%, 100% 100%;
-  }
-  75% {
-    background-position: 25% 75%, 0% 50%;
-  }
-  100% {
-    background-position: 0% 50%, 0% 0%;
-  }
+    0% {
+        background-position: 0% 50%, 0% 0%;
+    }
+    25% {
+        background-position: 100% 25%, 50% 50%;
+    }
+    50% {
+        background-position: 50% 100%, 100% 100%;
+    }
+    75% {
+        background-position: 25% 75%, 0% 50%;
+    }
+    100% {
+        background-position: 0% 50%, 0% 0%;
+    }
 }
 
 @layer utilities {
-  /* Added custom scrollbar styling to blend with theme */
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
 
-  ::-webkit-scrollbar-track {
-    background: linear-gradient(180deg, oklch(0.08 0.04 240), oklch(0.12 0.05 220));
-    border-radius: 6px;
-    border: 1px solid oklch(0.15 0.06 200 / 0.3);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, oklch(0.35 0.15 220), oklch(0.25 0.12 240));
-    border-radius: 6px;
-    border: 1px solid oklch(0.4 0.1 210 / 0.5);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, oklch(0.45 0.18 220), oklch(0.35 0.15 240));
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  }
-
-  ::-webkit-scrollbar-corner {
-    background: oklch(0.08 0.04 240);
-  }
-
-  /* Enhanced gradient utilities with better blending */
-  .gradient-blue {
-    background: linear-gradient(
-      135deg,
-      oklch(0.35 0.2 240 / 0.9),
-      oklch(0.45 0.18 220 / 0.85),
-      oklch(0.55 0.15 200 / 0.8)
-    );
-    border: 1px solid oklch(0.4 0.15 220 / 0.3);
-    box-shadow: 0 8px 32px oklch(0.3 0.2 220 / 0.4);
-    transition: all 0.3s ease;
-  }
-
-  .gradient-blue:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px oklch(0.3 0.2 220 / 0.5);
-  }
-
-  .gradient-purple {
-    background: linear-gradient(135deg, oklch(0.3 0.2 290 / 0.9), oklch(0.4 0.18 270 / 0.85), oklch(0.5 0.15 250 / 0.8));
-    border: 1px solid oklch(0.35 0.15 280 / 0.3);
-    box-shadow: 0 8px 32px oklch(0.3 0.2 280 / 0.4);
-    transition: all 0.3s ease;
-  }
-
-  .gradient-purple:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px oklch(0.3 0.2 280 / 0.5);
-  }
-
-  .gradient-text {
-    background: linear-gradient(135deg, oklch(0.85 0.15 220), oklch(0.95 0.08 200), oklch(0.9 0.12 180));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    filter: drop-shadow(0 2px 4px oklch(0.3 0.1 220 / 0.5));
-  }
-
-  /* Enhanced 3D panel with smoother animations */
-  .panel-3d {
-    background: linear-gradient(
-      145deg,
-      oklch(0.2 0.08 220 / 0.95),
-      oklch(0.16 0.06 240 / 0.9),
-      oklch(0.24 0.1 200 / 0.85)
-    );
-    border: 1px solid oklch(0.35 0.12 200 / 0.6);
-    box-shadow:
-      0 16px 32px rgba(0, 0, 0, 0.5),
-      0 6px 12px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 oklch(0.35 0.08 200 / 0.6),
-      inset 0 -1px 0 oklch(0.12 0.04 240 / 0.9),
-      0 0 30px oklch(0.4 0.15 220 / 0.3);
-    transform: perspective(1000px) rotateX(1deg);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(12px);
-  }
-
-  .panel-3d:hover {
-    transform: perspective(1000px) rotateX(0deg) translateY(-6px);
-    box-shadow:
-      0 24px 48px rgba(0, 0, 0, 0.6),
-      0 12px 24px rgba(0, 0, 0, 0.5),
-      inset 0 1px 0 oklch(0.4 0.1 200 / 0.7),
-      inset 0 -1px 0 oklch(0.12 0.04 240 / 1),
-      0 0 50px oklch(0.5 0.2 220 / 0.5);
-  }
-
-  /* Updated scroll-based background animation with proper parallax */
-  .minecraft-bg-scroll {
-    animation: none;
-    background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px)
-      calc(var(--scroll-y, 0) * -0.1px);
-    transition: background-position 0.1s ease-out;
-  }
-
-  /* Enhanced button styles to be more subtle and blend with environment */
-  .minecraft-button {
-    background: linear-gradient(
-      145deg,
-      oklch(0.25 0.08 220 / 0.85),
-      oklch(0.2 0.06 240 / 0.9),
-      oklch(0.28 0.1 200 / 0.8)
-    );
-    border: 1px solid oklch(0.35 0.12 210 / 0.6);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.4 0.08 200 / 0.4), 0 0 20px
-      oklch(0.3 0.1 220 / 0.2);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(8px);
-  }
-
-  .minecraft-button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, oklch(0.6 0.15 200 / 0.3), transparent);
-    transition: left 0.6s ease;
-  }
-
-  .minecraft-button:hover::before {
-    left: 100%;
-  }
-
-  .minecraft-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.45 0.1 200 / 0.5), 0 0 30px
-      oklch(0.4 0.15 220 / 0.4);
-    border-color: oklch(0.45 0.15 210 / 0.8);
-    background: linear-gradient(
-      145deg,
-      oklch(0.3 0.1 220 / 0.9),
-      oklch(0.25 0.08 240 / 0.95),
-      oklch(0.35 0.12 200 / 0.85)
-    );
-  }
-
-  /* Enhanced page transition animations with better easing */
-  .page-transition {
-    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px) scale(0.98);
+    ::-webkit-scrollbar {
+        width: 12px;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+
+    ::-webkit-scrollbar-track {
+        background: linear-gradient(180deg, oklch(0.08 0.04 240), oklch(0.12 0.05 220));
+        border-radius: 6px;
+        border: 1px solid oklch(0.15 0.06 200 / 0.3);
     }
-  }
 
-  /* Enhanced panel slide animations with proper arrow alignment */
-  .panel-slide {
-    animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  @keyframes slideInUp {
-    from {
-      opacity: 0;
-      transform: translateY(100%) scale(0.95);
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, oklch(0.35 0.15 220), oklch(0.25 0.12 240));
+        border-radius: 6px;
+        border: 1px solid oklch(0.4 0.1 210 / 0.5);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, oklch(0.45 0.18 220), oklch(0.35 0.15 240));
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
-  }
 
-  .panel-collapse {
-    animation: slideOutDown 0.4s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  }
-
-  @keyframes slideOutDown {
-    from {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+    ::-webkit-scrollbar-corner {
+        background: oklch(0.08 0.04 240);
     }
-    to {
-      opacity: 0;
-      transform: translateY(100%) scale(0.95);
+
+    .gradient-blue {
+        background: linear-gradient(
+                135deg,
+                oklch(0.35 0.2 240 / 0.9),
+                oklch(0.45 0.18 220 / 0.85),
+                oklch(0.55 0.15 200 / 0.8)
+        );
+        border: 1px solid oklch(0.4 0.15 220 / 0.3);
+        box-shadow: 0 8px 32px oklch(0.3 0.2 220 / 0.4);
+        transition: all 0.3s ease;
     }
-  }
 
-  /* Enhanced arrow button alignment with smooth animations */
-  .arrow-button-aligned {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-origin: center;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(
-      145deg,
-      oklch(0.22 0.08 220 / 0.95),
-      oklch(0.18 0.06 240 / 0.9),
-      oklch(0.25 0.1 200 / 0.85)
-    );
-    border: 1px solid oklch(0.35 0.1 200 / 0.6);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.3 0.06 200 / 0.4), 0 0 20px
-      oklch(0.3 0.1 220 / 0.3);
-    backdrop-filter: blur(12px);
-    /* Fixed alignment issues */
-    margin: 0 auto;
-    position: relative;
-  }
+    .gradient-blue:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px oklch(0.3 0.2 220 / 0.5);
+    }
 
-  .arrow-button-aligned:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.35 0.08 200 / 0.5), 0 0 35px
-      oklch(0.4 0.15 220 / 0.5);
-    background: linear-gradient(
-      145deg,
-      oklch(0.28 0.1 220 / 0.95),
-      oklch(0.22 0.08 240 / 0.9),
-      oklch(0.32 0.12 200 / 0.85)
-    );
-    border-color: oklch(0.45 0.15 200 / 0.8);
-  }
+    .gradient-purple {
+        background: linear-gradient(135deg, oklch(0.3 0.2 290 / 0.9), oklch(0.4 0.18 270 / 0.85), oklch(0.5 0.15 250 / 0.8));
+        border: 1px solid oklch(0.35 0.15 280 / 0.3);
+        box-shadow: 0 8px 32px oklch(0.3 0.2 280 / 0.4);
+        transition: all 0.3s ease;
+    }
 
-  /* Added blurry transparent effects for status buttons */
-  .status-button-blur {
-    background: linear-gradient(
-      135deg,
-      oklch(0.22 0.08 220 / 0.9),
-      oklch(0.18 0.06 240 / 0.95),
-      oklch(0.25 0.1 200 / 0.85)
-    );
-    border: 1px solid oklch(0.35 0.1 200 / 0.5);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 oklch(0.3 0.06 200 / 0.3), 0 0 15px
-      oklch(0.3 0.1 220 / 0.2);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(10px);
-  }
+    .gradient-purple:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px oklch(0.3 0.2 280 / 0.5);
+    }
 
-  .status-button-blur:hover {
-    background: linear-gradient(
-      135deg,
-      oklch(0.28 0.1 220 / 0.95),
-      oklch(0.22 0.08 240 / 1),
-      oklch(0.32 0.12 200 / 0.9)
-    );
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.35 0.08 200 / 0.4), 0 0 25px
-      oklch(0.4 0.15 220 / 0.4);
-    transform: translateY(-2px);
-  }
+    .gradient-text {
+        background: linear-gradient(135deg, oklch(0.85 0.15 220), oklch(0.95 0.08 200), oklch(0.9 0.12 180));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 2px 4px oklch(0.3 0.1 220 / 0.5));
+    }
 
-  /* Added new utility classes for Minecraft server aesthetics */
-  .minecraft-card {
-    background: linear-gradient(
-      145deg,
-      oklch(0.2 0.08 220 / 0.9),
-      oklch(0.16 0.06 240 / 0.95),
-      oklch(0.24 0.1 200 / 0.85)
-    );
-    border: 1px solid oklch(0.35 0.1 200 / 0.6);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.3 0.06 200 / 0.4), 0 0 20px
-      oklch(0.3 0.1 220 / 0.2);
-    backdrop-filter: blur(8px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    .panel-3d {
+        background: linear-gradient(
+                145deg,
+                oklch(0.2 0.08 220 / 0.95),
+                oklch(0.16 0.06 240 / 0.9),
+                oklch(0.24 0.1 200 / 0.85)
+        );
+        border: 1px solid oklch(0.35 0.12 200 / 0.6);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 oklch(0.35 0.08 200 / 0.6),
+        inset 0 -1px 0 oklch(0.12 0.04 240 / 0.9),
+        0 0 30px oklch(0.4 0.15 220 / 0.3);
+        transform: perspective(1000px) rotateX(1deg);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(12px);
+    }
 
-  .minecraft-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.35 0.08 200 / 0.5), 0 0 30px
-      oklch(0.4 0.15 220 / 0.4);
-  }
+    .panel-3d:hover {
+        transform: perspective(1000px) rotateX(0deg) translateY(-6px);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6),
+        0 12px 24px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 oklch(0.4 0.1 200 / 0.7),
+        inset 0 -1px 0 oklch(0.12 0.04 240 / 1),
+        0 0 50px oklch(0.5 0.2 220 / 0.5);
+    }
 
-  /* Enhanced Minecraft background with increased blur for better immersion */
-  .minecraft-bg {
-    position: relative;
-    background: url("/images/minecraft-bg.png"),
-      linear-gradient(
-        135deg,
-        oklch(0.05 0.06 260) 0%,
-        oklch(0.08 0.05 240) 15%,
-        oklch(0.06 0.08 200) 30%,
-        oklch(0.09 0.04 180) 45%,
-        oklch(0.07 0.06 160) 60%,
-        oklch(0.08 0.05 200) 75%,
-        oklch(0.06 0.07 240) 90%,
-        oklch(0.05 0.06 260) 100%
-      );
-    background-size: cover, 600% 600%;
-    background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px)
-      calc(var(--scroll-y, 0) * -0.1px);
-    background-attachment: fixed, scroll;
-    background-repeat: no-repeat, no-repeat;
-    min-height: 100vh;
-  }
+    .minecraft-bg-scroll {
+        animation: none;
+        background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px) calc(var(--scroll-y, 0) * -0.1px);
+        transition: background-position 0.1s ease-out;
+    }
 
-  .minecraft-bg::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      135deg,
-      oklch(0.05 0.06 260 / 0.4) 0%,
-      oklch(0.08 0.05 240 / 0.3) 25%,
-      oklch(0.06 0.08 200 / 0.2) 50%,
-      oklch(0.09 0.04 180 / 0.3) 75%,
-      oklch(0.05 0.06 260 / 0.4) 100%
-    );
-    pointer-events: none;
-    z-index: -1;
-  }
+    .minecraft-button {
+        background: linear-gradient(
+                145deg,
+                oklch(0.25 0.08 220 / 0.85),
+                oklch(0.2 0.06 240 / 0.9),
+                oklch(0.28 0.1 200 / 0.8)
+        );
+        border: 1px solid oklch(0.35 0.12 210 / 0.6);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.4 0.08 200 / 0.4), 0 0 20px oklch(0.3 0.1 220 / 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(8px);
+    }
+
+    .minecraft-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, oklch(0.6 0.15 200 / 0.3), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .minecraft-button:hover::before {
+        left: 100%;
+    }
+
+    .minecraft-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.45 0.1 200 / 0.5), 0 0 30px oklch(0.4 0.15 220 / 0.4);
+        border-color: oklch(0.45 0.15 210 / 0.8);
+        background: linear-gradient(
+                145deg,
+                oklch(0.3 0.1 220 / 0.9),
+                oklch(0.25 0.08 240 / 0.95),
+                oklch(0.35 0.12 200 / 0.85)
+        );
+    }
+
+    .page-transition {
+        animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+
+    .panel-slide {
+        animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(100%) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .panel-collapse {
+        animation: slideOutDown 0.4s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    }
+
+    @keyframes slideOutDown {
+        from {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(100%) scale(0.95);
+        }
+    }
+
+
+    .arrow-button-aligned {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform-origin: center;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: linear-gradient(
+                145deg,
+                oklch(0.22 0.08 220 / 0.95),
+                oklch(0.18 0.06 240 / 0.9),
+                oklch(0.25 0.1 200 / 0.85)
+        );
+        border: 1px solid oklch(0.35 0.1 200 / 0.6);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.3 0.06 200 / 0.4), 0 0 20px oklch(0.3 0.1 220 / 0.3);
+        backdrop-filter: blur(12px);
+
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .arrow-button-aligned:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.35 0.08 200 / 0.5), 0 0 35px oklch(0.4 0.15 220 / 0.5);
+        background: linear-gradient(
+                145deg,
+                oklch(0.28 0.1 220 / 0.95),
+                oklch(0.22 0.08 240 / 0.9),
+                oklch(0.32 0.12 200 / 0.85)
+        );
+        border-color: oklch(0.45 0.15 200 / 0.8);
+    }
+
+    .status-button-blur {
+        background: linear-gradient(
+                135deg,
+                oklch(0.22 0.08 220 / 0.9),
+                oklch(0.18 0.06 240 / 0.95),
+                oklch(0.25 0.1 200 / 0.85)
+        );
+        border: 1px solid oklch(0.35 0.1 200 / 0.5);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 oklch(0.3 0.06 200 / 0.3), 0 0 15px oklch(0.3 0.1 220 / 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(10px);
+    }
+
+    .status-button-blur:hover {
+        background: linear-gradient(
+                135deg,
+                oklch(0.28 0.1 220 / 0.95),
+                oklch(0.22 0.08 240 / 1),
+                oklch(0.32 0.12 200 / 0.9)
+        );
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.35 0.08 200 / 0.4), 0 0 25px oklch(0.4 0.15 220 / 0.4);
+        transform: translateY(-2px);
+    }
+
+    .minecraft-card {
+        background: linear-gradient(
+                145deg,
+                oklch(0.2 0.08 220 / 0.9),
+                oklch(0.16 0.06 240 / 0.95),
+                oklch(0.24 0.1 200 / 0.85)
+        );
+        border: 1px solid oklch(0.35 0.1 200 / 0.6);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.3 0.06 200 / 0.4), 0 0 20px oklch(0.3 0.1 220 / 0.2);
+        backdrop-filter: blur(8px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .minecraft-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.35 0.08 200 / 0.5), 0 0 30px oklch(0.4 0.15 220 / 0.4);
+    }
+
+    .minecraft-bg {
+        position: relative;
+        background: url("/images/minecraft-bg.png"),
+        linear-gradient(
+                135deg,
+                oklch(0.05 0.06 260) 0%,
+                oklch(0.08 0.05 240) 15%,
+                oklch(0.06 0.08 200) 30%,
+                oklch(0.09 0.04 180) 45%,
+                oklch(0.07 0.06 160) 60%,
+                oklch(0.08 0.05 200) 75%,
+                oklch(0.06 0.07 240) 90%,
+                oklch(0.05 0.06 260) 100%
+        );
+        background-size: cover, 600% 600%;
+        background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px) calc(var(--scroll-y, 0) * -0.1px);
+        background-attachment: fixed, scroll;
+        background-repeat: no-repeat, no-repeat;
+        min-height: 100vh;
+    }
+
+    .minecraft-bg::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+                135deg,
+                oklch(0.05 0.06 260 / 0.4) 0%,
+                oklch(0.08 0.05 240 / 0.3) 25%,
+                oklch(0.06 0.08 200 / 0.2) 50%,
+                oklch(0.09 0.04 180 / 0.3) 75%,
+                oklch(0.05 0.06 260 / 0.4) 100%
+        );
+        pointer-events: none;
+        z-index: -1;
+    }
 }

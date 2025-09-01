@@ -1,7 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
 
@@ -13,8 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Horse SMP - Minecraft Survival Server",
-  description: "Join Horse SMP - The ultimate Minecraft survival multiplayer experience",
-  generator: "v0.app",
+  description: "Join Horse SMP - The ultimate Minecraft survival multiplayer experience"
 }
 
 export default function RootLayout({
@@ -26,7 +24,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans ${inter.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
       </body>
     </html>
   )
