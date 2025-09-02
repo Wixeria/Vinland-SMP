@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {},
+    "commands": {
+      "install": "pnpm install --no-frozen-lockfile"
+    }
+  }
+}
