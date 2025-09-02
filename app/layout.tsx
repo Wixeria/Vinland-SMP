@@ -1,8 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { Suspense } from "react"
 import "./globals.css"
+import ComingSoon from "@/components/ui/soon"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,8 +11,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Horse SMP - Minecraft Survival Server",
-  description: "Join Horse SMP - The ultimate Minecraft survival multiplayer experience"
+  title: "Vinland SMP",
+  description: "Vinland SMP'e katıl - deneyimi dibine kadar yaşa!"
 }
 
 export default function RootLayout({
@@ -20,10 +20,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const showComingSoon = true // true ise site kapalı mesajı
+
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable} antialiased`}>
-        <Suspense fallback={null}>{children}</Suspense>
+        {showComingSoon && <ComingSoon />}
+        {!showComingSoon && children}
       </body>
     </html>
   )

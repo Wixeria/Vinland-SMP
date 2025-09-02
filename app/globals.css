@@ -1,497 +1,222 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Dark mode variant */
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --background: oklch(0.08 0.04 240);
-    --foreground: oklch(0.98 0.02 200);
-    --card: oklch(0.12 0.05 220);
-    --card-foreground: oklch(0.95 0.03 200);
-    --popover: oklch(0.12 0.05 220);
-    --popover-foreground: oklch(0.98 0.02 200);
-    --primary: oklch(0.65 0.25 220);
-    --primary-foreground: oklch(1 0 0);
-    --secondary: oklch(0.45 0.2 280);
-    --secondary-foreground: oklch(1 0 0);
-    --muted: oklch(0.18 0.04 220);
-    --muted-foreground: oklch(0.75 0.08 200);
-    --accent: oklch(0.55 0.25 180);
-    --accent-foreground: oklch(1 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --destructive-foreground: oklch(1 0 0);
-    --border: oklch(0.22 0.06 220);
-    --input: oklch(0.15 0.05 220);
-    --ring: oklch(0.65 0.25 220);
-    --chart-1: oklch(0.5 0.2 270);
-    --chart-2: oklch(0.6 0.2 220);
-    --chart-3: oklch(0.6 0.2 140);
-    --chart-4: oklch(0.8 0.15 85);
-    --chart-5: oklch(0.6 0.25 25);
-    --radius: 0.75rem;
-    --sidebar: oklch(0.12 0.05 220);
-    --sidebar-foreground: oklch(0.98 0.02 200);
-    --sidebar-primary: oklch(0.65 0.25 220);
-    --sidebar-primary-foreground: oklch(1 0 0);
-    --sidebar-accent: oklch(0.55 0.25 180);
-    --sidebar-accent-foreground: oklch(1 0 0);
-    --sidebar-border: oklch(0.22 0.06 220);
-    --sidebar-ring: oklch(0.65 0.25 220);
+  /* === Colors === */
+  --background: oklch(0.12 0.08 85);
+  --foreground: oklch(0.98 0.02 85);
+
+  --card: oklch(0.16 0.09 85);
+  --card-foreground: oklch(0.95 0.03 85);
+
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.75 0.22 85);
+  --primary-foreground: oklch(0.98 0.02 85);
+
+  --secondary: oklch(0.65 0.18 45);
+  --secondary-foreground: var(--primary-foreground);
+
+  --muted: oklch(0.18 0.04 85);
+  --muted-foreground: oklch(0.75 0.08 85);
+
+  --accent: var(--secondary);
+  --accent-foreground: var(--primary-foreground);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--primary-foreground);
+
+  --border: oklch(0.22 0.06 85);
+  --input: oklch(0.15 0.05 85);
+  --ring: var(--primary);
+
+  /* Charts */
+  --chart-1: oklch(0.8 0.15 85);
+  --chart-2: oklch(0.7 0.2 45);
+  --chart-3: oklch(0.6 0.2 25);
+  --chart-4: oklch(0.9 0.12 85);
+  --chart-5: oklch(0.8 0.15 45);
+
+  /* Misc */
+  --radius: 16px; /* tam yuvarlak köşe */
+
+  /* Sidebar */
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--primary-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 .dark {
+  --background: oklch(0.08 0.04 85);
+  --card: oklch(0.12 0.05 85);
+  --popover: var(--card);
 
-    --background: oklch(0.08 0.04 240);
-    --foreground: oklch(0.98 0.02 200);
-    --card: oklch(0.12 0.05 220);
-    --card-foreground: oklch(0.95 0.03 200);
-    --popover: oklch(0.12 0.05 220);
-    --popover-foreground: oklch(0.98 0.02 200);
-    --primary: oklch(0.65 0.25 220);
-    --primary-foreground: oklch(1 0 0);
-    --secondary: oklch(0.45 0.2 280);
-    --secondary-foreground: oklch(1 0 0);
-    --muted: oklch(0.18 0.04 220);
-    --muted-foreground: oklch(0.75 0.08 200);
-    --accent: oklch(0.55 0.25 180);
-    --accent-foreground: oklch(1 0 0);
-    --destructive: oklch(0.396 0.141 25.723);
-    --destructive-foreground: oklch(0.637 0.237 25.331);
-    --border: oklch(0.22 0.06 220);
-    --input: oklch(0.15 0.05 220);
-    --ring: oklch(0.65 0.25 220);
-    --chart-1: oklch(0.6 0.2 270);
-    --chart-2: oklch(0.7 0.2 220);
-    --chart-3: oklch(0.7 0.2 140);
-    --chart-4: oklch(0.8 0.15 85);
-    --chart-5: oklch(0.6 0.25 25);
-    --sidebar: oklch(0.12 0.05 220);
-    --sidebar-foreground: oklch(0.98 0.02 200);
-    --sidebar-primary: oklch(0.65 0.25 220);
-    --sidebar-primary-foreground: oklch(1 0 0);
-    --sidebar-accent: oklch(0.55 0.25 180);
-    --sidebar-accent-foreground: oklch(1 0 0);
-    --sidebar-border: oklch(0.22 0.06 220);
-    --sidebar-ring: oklch(0.65 0.25 220);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+
+  --sidebar: var(--card);
 }
 
+/* Theme inline mapping */
 @theme inline {
-    --font-inter: "Inter", sans-serif;
-    --font-sans: var(--font-inter);
-    --font-mono: var(--font-inter);
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-card: var(--card);
-    --color-card-foreground: var(--card-foreground);
-    --color-popover: var(--popover);
-    --color-popover-foreground: var(--popover-foreground);
-    --color-primary: var(--primary);
-    --color-primary-foreground: var(--primary-foreground);
-    --color-secondary: var(--secondary);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-muted: var(--muted);
-    --color-muted-foreground: var(--muted-foreground);
-    --color-accent: var(--accent);
-    --color-accent-foreground: var(--accent-foreground);
-    --color-destructive: var(--destructive);
-    --color-destructive-foreground: var(--destructive-foreground);
-    --color-border: var(--border);
-    --color-input: var(--input);
-    --color-ring: var(--ring);
-    --color-chart-1: var(--chart-1);
-    --color-chart-2: var(--chart-2);
-    --color-chart-3: var(--chart-3);
-    --color-chart-4: var(--chart-4);
-    --color-chart-5: var(--chart-5);
-    --radius-sm: calc(var(--radius) - 4px);
-    --radius-md: calc(var(--radius) - 2px);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) + 4px);
-    --color-sidebar: var(--sidebar);
-    --color-sidebar-foreground: var(--sidebar-foreground);
-    --color-sidebar-primary: var(--sidebar-primary);
-    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-    --color-sidebar-accent: var(--sidebar-accent);
-    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-    --color-sidebar-border: var(--sidebar-border);
-    --color-sidebar-ring: var(--sidebar-ring);
+  --font-inter: "Inter", sans-serif;
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
-    * {
-        @apply border-border outline-ring/50;
-    }
+  * {
+    @apply border-border outline-ring/50;
+  }
 
-    body {
-        @apply bg-background text-foreground;
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-        background: url("/images/minecraft-bg.png"),
-        linear-gradient(
-                135deg,
-                oklch(0.05 0.06 260) 0%,
-                oklch(0.08 0.05 240) 15%,
-                oklch(0.06 0.08 200) 30%,
-                oklch(0.09 0.04 180) 45%,
-                oklch(0.07 0.06 160) 60%,
-                oklch(0.08 0.05 200) 75%,
-                oklch(0.06 0.07 240) 90%,
-                oklch(0.05 0.06 260) 100%
-        );
-        background-size: 120% 120%, 400% 400%;
-        background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px) calc(var(--scroll-y, 0) * -0.1px);
-        background-attachment: fixed, scroll;
-        background-repeat: no-repeat, no-repeat;
-        min-height: 100vh;
-        position: relative;
+  body {
+    @apply bg-background text-foreground;
+    background: url("/images/minecraft-bg.png"),
+      linear-gradient(
+        135deg,
+        oklch(0.18 0.09 85) 0%,
+        oklch(0.22 0.10 45) 25%,
+        oklch(0.28 0.13 85) 50%,
+        oklch(0.22 0.10 45) 75%,
+        oklch(0.18 0.09 85) 100%
+      );
+    background-size: cover, 400% 400%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    min-height: 100dvh; /* fullscreen + mac uyumlu */
+  }
 
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-                135deg,
-                oklch(0.05 0.06 260 / 0.3) 0%,
-                oklch(0.08 0.05 240 / 0.2) 25%,
-                oklch(0.06 0.08 200 / 0.15) 50%,
-                oklch(0.09 0.04 180 / 0.2) 75%,
-                oklch(0.05 0.06 260 / 0.3) 100%
-        );
-        pointer-events: none;
-        z-index: -1;
-    }
-
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-@keyframes minecraftGradient {
-    0% {
-        background-position: 0% 50%, 0% 0%;
-    }
-    25% {
-        background-position: 100% 25%, 50% 50%;
-    }
-    50% {
-        background-position: 50% 100%, 100% 100%;
-    }
-    75% {
-        background-position: 25% 75%, 0% 50%;
-    }
-    100% {
-        background-position: 0% 50%, 0% 0%;
-    }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      oklch(0.18 0.09 85 / 0.28),
+      oklch(0.25 0.12 45 / 0.18),
+      oklch(0.22 0.10 45 / 0.28)
+    );
+    pointer-events: none;
+    z-index: -1;
+    backdrop-filter: blur(20px);
+  }
 }
 
 @layer utilities {
+  .glass-card {
+    border-radius: var(--radius-lg); /* köşeler artık tam yuvarlak */
+    background: linear-gradient(
+      135deg,
+      oklch(0.95 0.12 85 / 0.25),
+      oklch(0.85 0.18 45 / 0.18),
+      oklch(0.65 0.15 45 / 0.12)
+    );
+    border: 1px solid oklch(0.85 0.18 45 / 0.08);
+    box-shadow: 0 2px 8px oklch(0.85 0.18 45 / 0.08);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+  }
 
-    ::-webkit-scrollbar {
-        width: 12px;
-    }
+  .glass-card:hover {
+    background: linear-gradient(
+      135deg,
+      oklch(0.98 0.15 85 / 0.32),
+      oklch(0.85 0.18 45 / 0.22)
+    );
+    box-shadow: 0 4px 16px oklch(0.85 0.18 45 / 0.1);
+    transform: translateY(-2px);
+  }
 
-    ::-webkit-scrollbar-track {
-        background: linear-gradient(180deg, oklch(0.08 0.04 240), oklch(0.12 0.05 220));
-        border-radius: 6px;
-        border: 1px solid oklch(0.15 0.06 200 / 0.3);
-    }
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      oklch(0.98 0.15 85),
+      oklch(0.95 0.08 45),
+      oklch(0.9 0.12 85)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px oklch(0.85 0.18 45 / 0.25));
+  }
 
-    ::-webkit-scrollbar-thumb {
-        background: linear-gradient(180deg, oklch(0.35 0.15 220), oklch(0.25 0.12 240));
-        border-radius: 6px;
-        border: 1px solid oklch(0.4 0.1 210 / 0.5);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-    }
+  .arrow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(180deg, oklch(0.45 0.18 220), oklch(0.35 0.15 240));
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    }
+  .arrow-button.open svg {
+    transform: rotate(180deg);
+  }
 
-    ::-webkit-scrollbar-corner {
-        background: oklch(0.08 0.04 240);
-    }
-
-    .gradient-blue {
-        background: linear-gradient(
-                135deg,
-                oklch(0.35 0.2 240 / 0.9),
-                oklch(0.45 0.18 220 / 0.85),
-                oklch(0.55 0.15 200 / 0.8)
-        );
-        border: 1px solid oklch(0.4 0.15 220 / 0.3);
-        box-shadow: 0 8px 32px oklch(0.3 0.2 220 / 0.4);
-        transition: all 0.3s ease;
-    }
-
-    .gradient-blue:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 40px oklch(0.3 0.2 220 / 0.5);
-    }
-
-    .gradient-purple {
-        background: linear-gradient(135deg, oklch(0.3 0.2 290 / 0.9), oklch(0.4 0.18 270 / 0.85), oklch(0.5 0.15 250 / 0.8));
-        border: 1px solid oklch(0.35 0.15 280 / 0.3);
-        box-shadow: 0 8px 32px oklch(0.3 0.2 280 / 0.4);
-        transition: all 0.3s ease;
-    }
-
-    .gradient-purple:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 40px oklch(0.3 0.2 280 / 0.5);
-    }
-
-    .gradient-text {
-        background: linear-gradient(135deg, oklch(0.85 0.15 220), oklch(0.95 0.08 200), oklch(0.9 0.12 180));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        filter: drop-shadow(0 2px 4px oklch(0.3 0.1 220 / 0.5));
-    }
-
-    .panel-3d {
-        background: linear-gradient(
-                145deg,
-                oklch(0.2 0.08 220 / 0.95),
-                oklch(0.16 0.06 240 / 0.9),
-                oklch(0.24 0.1 200 / 0.85)
-        );
-        border: 1px solid oklch(0.35 0.12 200 / 0.6);
-        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5),
-        0 6px 12px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 oklch(0.35 0.08 200 / 0.6),
-        inset 0 -1px 0 oklch(0.12 0.04 240 / 0.9),
-        0 0 30px oklch(0.4 0.15 220 / 0.3);
-        transform: perspective(1000px) rotateX(1deg);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        backdrop-filter: blur(12px);
-    }
-
-    .panel-3d:hover {
-        transform: perspective(1000px) rotateX(0deg) translateY(-6px);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6),
-        0 12px 24px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 oklch(0.4 0.1 200 / 0.7),
-        inset 0 -1px 0 oklch(0.12 0.04 240 / 1),
-        0 0 50px oklch(0.5 0.2 220 / 0.5);
-    }
-
-    .minecraft-bg-scroll {
-        animation: none;
-        background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px) calc(var(--scroll-y, 0) * -0.1px);
-        transition: background-position 0.1s ease-out;
-    }
-
-    .minecraft-button {
-        background: linear-gradient(
-                145deg,
-                oklch(0.25 0.08 220 / 0.85),
-                oklch(0.2 0.06 240 / 0.9),
-                oklch(0.28 0.1 200 / 0.8)
-        );
-        border: 1px solid oklch(0.35 0.12 210 / 0.6);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.4 0.08 200 / 0.4), 0 0 20px oklch(0.3 0.1 220 / 0.2);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        overflow: hidden;
-        backdrop-filter: blur(8px);
-    }
-
-    .minecraft-button::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, oklch(0.6 0.15 200 / 0.3), transparent);
-        transition: left 0.6s ease;
-    }
-
-    .minecraft-button:hover::before {
-        left: 100%;
-    }
-
-    .minecraft-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.45 0.1 200 / 0.5), 0 0 30px oklch(0.4 0.15 220 / 0.4);
-        border-color: oklch(0.45 0.15 210 / 0.8);
-        background: linear-gradient(
-                145deg,
-                oklch(0.3 0.1 220 / 0.9),
-                oklch(0.25 0.08 240 / 0.95),
-                oklch(0.35 0.12 200 / 0.85)
-        );
-    }
-
-    .page-transition {
-        animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px) scale(0.98);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-    }
-
-
-    .panel-slide {
-        animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    @keyframes slideInUp {
-        from {
-            opacity: 0;
-            transform: translateY(100%) scale(0.95);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-    }
-
-    .panel-collapse {
-        animation: slideOutDown 0.4s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-    }
-
-    @keyframes slideOutDown {
-        from {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-        to {
-            opacity: 0;
-            transform: translateY(100%) scale(0.95);
-        }
-    }
-
-
-    .arrow-button-aligned {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform-origin: center;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        background: linear-gradient(
-                145deg,
-                oklch(0.22 0.08 220 / 0.95),
-                oklch(0.18 0.06 240 / 0.9),
-                oklch(0.25 0.1 200 / 0.85)
-        );
-        border: 1px solid oklch(0.35 0.1 200 / 0.6);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.3 0.06 200 / 0.4), 0 0 20px oklch(0.3 0.1 220 / 0.3);
-        backdrop-filter: blur(12px);
-
-        margin: 0 auto;
-        position: relative;
-    }
-
-    .arrow-button-aligned:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.35 0.08 200 / 0.5), 0 0 35px oklch(0.4 0.15 220 / 0.5);
-        background: linear-gradient(
-                145deg,
-                oklch(0.28 0.1 220 / 0.95),
-                oklch(0.22 0.08 240 / 0.9),
-                oklch(0.32 0.12 200 / 0.85)
-        );
-        border-color: oklch(0.45 0.15 200 / 0.8);
-    }
-
-    .status-button-blur {
-        background: linear-gradient(
-                135deg,
-                oklch(0.22 0.08 220 / 0.9),
-                oklch(0.18 0.06 240 / 0.95),
-                oklch(0.25 0.1 200 / 0.85)
-        );
-        border: 1px solid oklch(0.35 0.1 200 / 0.5);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 oklch(0.3 0.06 200 / 0.3), 0 0 15px oklch(0.3 0.1 220 / 0.2);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        backdrop-filter: blur(10px);
-    }
-
-    .status-button-blur:hover {
-        background: linear-gradient(
-                135deg,
-                oklch(0.28 0.1 220 / 0.95),
-                oklch(0.22 0.08 240 / 1),
-                oklch(0.32 0.12 200 / 0.9)
-        );
-        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.35 0.08 200 / 0.4), 0 0 25px oklch(0.4 0.15 220 / 0.4);
-        transform: translateY(-2px);
-    }
-
-    .minecraft-card {
-        background: linear-gradient(
-                145deg,
-                oklch(0.2 0.08 220 / 0.9),
-                oklch(0.16 0.06 240 / 0.95),
-                oklch(0.24 0.1 200 / 0.85)
-        );
-        border: 1px solid oklch(0.35 0.1 200 / 0.6);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 oklch(0.3 0.06 200 / 0.4), 0 0 20px oklch(0.3 0.1 220 / 0.2);
-        backdrop-filter: blur(8px);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .minecraft-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 oklch(0.35 0.08 200 / 0.5), 0 0 30px oklch(0.4 0.15 220 / 0.4);
-    }
-
-    .minecraft-bg {
-        position: relative;
-        background: url("/images/minecraft-bg.png"),
-        linear-gradient(
-                135deg,
-                oklch(0.05 0.06 260) 0%,
-                oklch(0.08 0.05 240) 15%,
-                oklch(0.06 0.08 200) 30%,
-                oklch(0.09 0.04 180) 45%,
-                oklch(0.07 0.06 160) 60%,
-                oklch(0.08 0.05 200) 75%,
-                oklch(0.06 0.07 240) 90%,
-                oklch(0.05 0.06 260) 100%
-        );
-        background-size: cover, 600% 600%;
-        background-position: center calc(var(--scroll-y, 0) * -0.5px), calc(var(--scroll-y, 0) * -0.2px) calc(var(--scroll-y, 0) * -0.1px);
-        background-attachment: fixed, scroll;
-        background-repeat: no-repeat, no-repeat;
-        min-height: 100vh;
-    }
-
-    .minecraft-bg::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-                135deg,
-                oklch(0.05 0.06 260 / 0.4) 0%,
-                oklch(0.08 0.05 240 / 0.3) 25%,
-                oklch(0.06 0.08 200 / 0.2) 50%,
-                oklch(0.09 0.04 180 / 0.3) 75%,
-                oklch(0.05 0.06 260 / 0.4) 100%
-        );
-        pointer-events: none;
-        z-index: -1;
-    }
+  .minecraft-bg {
+    @apply relative;
+    min-height: 100dvh; /* fullscreen + mac uyumlu */
+    background: url("/images/minecraft-bg.png"),
+      linear-gradient(
+        135deg,
+        oklch(0.18 0.09 85),
+        oklch(0.22 0.10 45),
+        oklch(0.25 0.12 45)
+      );
+    background-size: cover, 600% 600%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
 }
